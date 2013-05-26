@@ -25,5 +25,5 @@ linda.io.on :connect do  ## RocketIO's "connect" event
   end
 end
 
-sleep 5
+sleep 10
 STDERR.puts "timeout"
