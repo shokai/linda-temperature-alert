@@ -4,7 +4,7 @@ alert Temperature with RocketIO::Linda
 
 * https://github.com/shokai/linda-temperature-alert
 * read tuple ["sensor", "temperature"]
-* write tuple ["say", "現在の気温、24度"] or ["say", "現在の気温、8度。お体に障りますよ"]
+* write tuple ["saykana", "現在の気温、24度"] or ["saykana", "現在の気温、8度。お体に障りますよ"]
 
 
 Dependencies
