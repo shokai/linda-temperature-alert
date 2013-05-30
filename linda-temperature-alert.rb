@@ -16,10 +16,10 @@ linda.io.on :connect do  ## RocketIO's "connect" event
     p tuple
     if tuple.size == 3
       temp = tuple[2].to_i
-      line = "現在の気温、#{temp}度"
-      line += "。お体に障りますよ。" if temp < 20 or temp > 24
+      line = "げんざいのきおん #{temp}ど"
+      line += " おからだにさわりますよ" if temp < 20 or temp > 24
       puts line
-      ts.write ["say", line]
+      ts.write ["saykana", line]
     end
     exit
   end
