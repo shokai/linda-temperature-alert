@@ -16,10 +16,13 @@ linda.io.on :connect do  ## RocketIO's "connect" event
     p tuple
     if tuple.size == 3
       temp = tuple[2].to_i
-      line = "げんざいのきおん #{temp}ど"
-      line += " おからだにさわりますよ" if temp < 20 or temp > 24
-      puts line
-      ts.write ["saykana", line]
+      lines = ["げんざいのきおん", "#{temp}ど"]
+      lines << "おからだにさわりますよ" if temp < 20 or temp > 24
+      puts lines
+      lines.each do |line|
+        ts.write ["saykana", line]
+        sleep 1.5
+      end
     end
     exit
   end
